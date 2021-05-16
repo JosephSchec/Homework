@@ -44,17 +44,12 @@ get_days_dictionary()
 
 
 def get_days(month):
-    days = 0
-    cal = ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-           'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec')
-    for m in cal:
-        if month == 'Feb':
-            days = 28
-        elif month == 'Apr' or 'Jun' or 'Sep' or 'Nov':
-            days = 30
-        else:
-            days = 31
-    return days
+    if month == 'Feb':
+        return 28
+    elif month == 'Apr' or 'Jun' or 'Sep' or 'Nov':
+        return 30
+    else:
+        return 31
 
 
-print(get_days('Apr'))
+print(get_days('Feb'))
