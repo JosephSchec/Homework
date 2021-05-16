@@ -44,12 +44,21 @@ get_days_dictionary()
 
 
 def get_days(month):
-    if month == 'Feb':
-        return 28
-    elif month == 'Apr' or 'Jun' or 'Sep' or 'Nov':
-        return 30
-    else:
-        return 31
+    calendar = {
+        'Jan': '31',
+        'Feb': '28',
+        'Mar': '31',
+        'Apr': '30',
+        'May': '31',
+        'Jun': '30',
+        'Jul': '31',
+        'Aug': '31',
+        'Sep': '30',
+        'Oct': '31',
+        'Nov': '30',
+        'Dec': '31'
+    }
+    return calendar.get(month)
 
 
-print(get_days('Feb'))
+print(get_days('May'))
