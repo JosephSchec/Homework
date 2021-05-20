@@ -42,8 +42,10 @@ def get_days_dictionary():
 
 get_days_dictionary()
 
+# for linter returning int
 
-def get_days(month):
+
+def get_days(month: str) -> int:
     calendar = {
         'Jan': '31',
         'Feb': '28',
