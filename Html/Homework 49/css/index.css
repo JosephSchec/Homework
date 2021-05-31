@@ -1,0 +1,68 @@
+html{
+    background-color: rgb(252, 241, 227);
+
+}
+
+header{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(7, 124, 124);
+}
+
+h2{
+    font-weight: bold;
+    text-align: center;
+}
+
+/*drinks and pics on the menu*/
+h3,nav{
+    text-align: center;
+}
+
+h3{
+    font-size: 65%em;
+}
+
+p{
+    font-weight: bold;
+    font-style: italic;
+    text-align:justify;
+    font-size: 1.5em;
+}
+nav{
+
+    font-size: 1.5rem;
+}
+/*Menu images*/
+nav img {
+    width: 275px;
+    border-radius: 10px;
+}
+
+/*homepage image*/
+header img{
+    width: 500px;
+    border-radius: 10px;
+}
+
+
+article{
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+/*drinks*/
+div{
+    text-align: center;
+    font-size: 18px;
+}
+
+/*drinks images*/
+div img{
+    width: 100px;
+}
