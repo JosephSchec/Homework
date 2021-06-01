@@ -1,10 +1,6 @@
 html{
-    background-color: rgb(252, 241, 227);
+    background-color: rgb(241, 232, 221);
 
-}
-
-header{
-    text-align: center;
 }
 
 h1{
@@ -19,25 +15,19 @@ h2{
     text-align: center;
 }
 
-/*drinks and pics on the menu*/
-h3,nav{
-    text-align: center;
-}
 
-h3{
-    font-size: 65%em;
-}
-
+/*"Located in Lakewood" - homepage*/
 p{
     font-weight: bold;
     font-style: italic;
-    text-align:justify;
-    font-size: 1.5em;
-}
-nav{
-
     font-size: 1.5rem;
 }
+
+/*change page*/
+nav{
+    font-size: 1.5rem;
+}
+
 /*Menu images*/
 nav img {
     width: 275px;
@@ -50,19 +40,18 @@ header img{
     border-radius: 10px;
 }
 
-
+/*Menu Abouts*/
 article{
     font-style: italic;
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
-/*drinks*/
-div{
+/*header = homepage pic and links , h3 = drinks , nav =  all pics and links , div = drink types*/
+header,h3,nav,div{
     text-align: center;
-    font-size: 18px;
 }
 
 /*drinks images*/
 div img{
-    width: 100px;
+    width: 4em;
 }
