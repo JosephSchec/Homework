@@ -50,15 +50,16 @@ a:visited{
  a:hover{
     font-size: 2em;
 }
-span{
-    display: block;
-    font-size: 12px;
-    padding-right: 15px;
-}
+
 
 #copyright{
     text-align: left;
     margin-top: 3em;
     font-size: 15px;
     text-shadow: 2px -2px 3px slategrey;
+}
+#watermark{
+    display: block;
+    font-size: 12px;
+    padding-right: 15px;
 }

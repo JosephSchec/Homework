@@ -2,7 +2,7 @@ html{
     background-color: rgb(241, 232, 221);
 }
 /*header = homepage pic and links , h1 = Menu , h3 = drinks , nav =  all pics and links , div = drink types*/
-header,h1,h2,h3,nav,div{
+header,h1,h2,h3,nav,div, .drink article{
     text-align: center; 
     margin: auto;
 }
@@ -12,18 +12,13 @@ h1{
     font-size: 3em;
     color: rgb(3, 153, 153);
     border: 12px dotted rgb(123, 209, 238);
-
     max-width: 600px;
-
 }
 
-h2{
+h2,h3{
     font-weight: bold;
     margin-top: 2em;
     margin-bottom: 2em;
-}
-h3{
-    margin-top: 2em;
 }
 
 /*"Located in Lakewood" - homepage*/
@@ -36,20 +31,20 @@ h3{
 #restpic img{
     transform: scale(1.3);
     border-radius: 10px;
-    margin-bottom: 2em;
 }
 /*change page*/
 nav{
-    font-size: 1.2rem;
+    font-size: 1.2em;
 }
+
 
 /*Menu images*/
 .menuitem nav img, .menuitem nav a img{
     width: 300px;
     border-radius: 10px;
     margin-bottom: 1em;
-}
 
+}
 
 
 /*Menu Abouts*/
@@ -58,10 +53,12 @@ nav{
     font-size: 1.2em;
     
     text-transform: capitalize;
-    text-align: justify;
-    transform: translate(5em, -1em)
+    transform: translate(-21em, -1em)
+    
 }
-
+article{
+  margin-left: -3em;
+}
 #homepage{
     margin-bottom: 3em;
     margin-top: -14em;
@@ -71,10 +68,7 @@ nav{
 .drink img{
     width: 150px;
 }
-.drink article{
-    margin: 1.2em;
 
-}
 
 a{
     text-decoration: none;
@@ -93,20 +87,21 @@ a:visited{
 }
 
 #fork,#knife{
-    width:526px;
+
+    max-width:526px;
     margin: auto;
 }
  .images #fork img{
-    box-sizing: border-box;
+
     margin-bottom: -14.5em;
-    margin-right: 38em;
+    margin-right: 500px;
     transform: scale(.9);
 }
 
  .images #knife img{
     transform: scale(.28);
     margin-left: 28em;
-    margin-top: -35em;
+    margin-top: -33em;
 }
 #copyright{
     text-align: left;
@@ -114,12 +109,16 @@ a:visited{
     font-size: 15px;
     text-shadow: 2px -1px 1px cyan;
 }
-.food{
+.spoonL{
     list-style-image:url("/Images/spoon.png")
    
 }
 
-.food li{
+.spoonL li{
      margin-left:5em;
      transform: translate(10px, 120px);
+}
+.price{
+    border: 2px double rgb(0, 255, 0);
+    max-width: 300px;
 }
