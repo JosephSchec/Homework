@@ -17,14 +17,14 @@ h1{
 
 h2,h3{
     font-weight: bold;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin:2em;
 }
 
 /*"Located in Lakewood" - homepage*/
 #located{
     font-weight: bold;
     font-style: italic;
+    color: rgb(27, 27, 136);
     font-size: 1.5rem;
 }
 /*homepage image*/
@@ -111,14 +111,15 @@ a:visited{
 }
 .spoonL{
     list-style-image:url("/Images/spoon.png")
-   
 }
 
 .spoonL li{
-     margin-left:5em;
-     transform: translate(10px, 120px);
+    
+    margin-left: 4em;
+    transform: translate(5px, 120px);
 }
 .price{
-    border: 2px double rgb(0, 255, 0);
+    border: 1px solid rgb(0, 255, 0);
     max-width: 300px;
+    border-radius: 3em;
 }
