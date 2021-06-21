@@ -1,0 +1,154 @@
+
+/*header = homepage pic and links , h1 = Menu , h3 = drinks , nav =  all pics and links , div = drink types*/
+header,h1,h2,h3,nav,div, .drink article{
+    text-align: center; 
+    margin: auto;
+}
+
+html {
+    background: linear-gradient(180deg, rgba(241, 232, 221, 1) 25%, rgba(173, 255, 255, 1) 100%);
+    background-repeat: no-repeat;
+}
+
+h1{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(3, 153, 153);
+    border: 12px dotted rgb(123, 209, 238);
+    max-width: 600px;
+    font-family: 'Caveat', cursive;
+}
+h1~div {
+    position: absolute;
+}
+h2,h3{
+    font-weight: bold;
+    margin:2em;
+}
+
+
+/*change page*/
+nav{
+    font-size: 1.2em;
+}
+.menuitem{
+    margin-top: -2em;
+}
+
+/*Menu images*/
+.menuitem nav img{
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+
+/*Menu Abouts*/
+.menuitem article{
+    font-style: italic;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    transform: translate(3em, -1em)
+
+}
+article{  
+    width:20%;
+    box-sizing: border-box;
+    margin-left: -3em;
+}
+
+#return-to-top{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2em;
+    display: inline;
+}
+#return-to-homepage{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 2em;
+    display: inline;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color:rgb(0, 140, 255);
+}
+a:visited{
+     color:rgb(0, 100, 100);
+}
+ a:hover{
+    font-size: 2em;
+    transition: 5s;
+}
+
+.images{
+   width: 90%;
+}
+
+#copyright{
+    margin-top: 3em;
+    font-size: 15px;
+    text-shadow: 2px -1px 1px cyan;
+    text-align: justify;
+}
+.spoonL{
+    list-style-image:url("/Images/spoon.png")
+}
+
+.spoonL li{
+    margin-left: 4em;
+    transform: translate(5px, 120px);
+}
+.price{
+    border: 1px solid rgb(0, 255, 0);
+    max-width: 300px;
+    border-radius: 3em;
+}
+div ul li {
+    font-size: 1em;
+    border: 3px dashed red;
+    width: 100px;
+    margin-bottom: .5em;
+    list-style-type:none;
+
+}
+#return-to-top a:hover,#return-to-homepage a,  div ul li a:hover{
+    transition: none;
+    font-size: 1em;
+}
+
+.drink>article{
+    position: relative;
+    float: left;
+    margin-left: 10.33%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    text-decoration: underline;
+    }
+
+
+article~nav{
+    position: absolute;
+    width: 100px;
+    margin-top: 2em;
+}
+.drink img{
+    margin-top: 1em;
+
+   
+    text-align: center;
+}
+
+#d{
+    position: relative;
+}
+#end-of-page{
+    clear: both;
+    padding: 1em;
+    margin: 0;
+}
