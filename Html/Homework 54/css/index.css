@@ -51,7 +51,6 @@ h2,h3{
     right: 2em;
 }
 #feedback:hover, #financial:hover{
-    font-size: 1.4em;
     transition: 0;
 }
 
