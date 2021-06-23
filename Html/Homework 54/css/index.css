@@ -127,7 +127,7 @@ a:visited{
 
 @media screen and (max-width:800px){
     #fork, #knife{display: none;}
-    #plate {margin-left:20%;
+    #plate {
 
     box-sizing: border-box;}
     #plate img{
@@ -136,5 +136,13 @@ a:visited{
     #homepage{ margin:auto; margin-top: 2em;}
     a:hover{
         font-size: 1em;
+    }
+    #feedback{
+        font-size: 1.2em;
+        position: fixed;
+        top: 1em;
+        right: 1.7em;
+        color: red;
+        transform: none;
     }
 }
