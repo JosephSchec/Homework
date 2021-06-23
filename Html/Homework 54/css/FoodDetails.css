@@ -52,7 +52,7 @@ a:visited{
 }
  a:hover{
     font-size: 2em;
-    transition: 3s;
+    transition: 10s;
 }
 
 
@@ -61,6 +61,9 @@ a:visited{
     margin-top: 3em;
     font-size: 15px;
     text-shadow: 2px -2px 3px slategrey;
+}
+#copyright a:hover{
+    font-size: 15px;
 }
 #watermark{
     display: block;
