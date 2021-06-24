@@ -1,0 +1,129 @@
+html{
+    background-color: rgb(241, 232, 221);
+    background-image: url("/Images/background.png");
+    
+}
+/*header = homepage pic and links , h1 = Menu , h3 = drinks , nav =  all pics and links , div = drink types*/
+header,h1,h2,h3,nav,div, .drink article{
+    text-align: center; 
+    margin: auto;
+}
+
+h1{
+    margin-top: .95em;
+    font-weight: bold;
+    font-size: 3em;
+    color: rgb(3, 153, 153);
+    border: 12px dotted rgb(123, 209, 238);
+    max-width: 600px;
+    font-family: 'Caveat', cursive;
+}
+
+h2,h3{
+    font-weight: bold;
+    margin:2em;
+}
+
+/*"Located in Lakewood" - homepage*/
+#located{
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(27, 27, 136);
+    font-size: 1.5rem;
+    margin-left: 1em;
+}
+#located:first-letter{
+    font-size: 2em;
+    font-family: serif;
+}
+#feedback {
+    font-size: 1.4em;
+    position: fixed;
+    top: 3em;
+    right: 2em;
+    color: red;
+    transform: rotate(45deg);
+}
+#financial{
+    font-size:1em;
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+}
+#feedback:hover, #financial:hover{
+    transition: 0;
+}
+
+
+.images{
+    display: flex;
+    height: 266px;
+    justify-content: space-evenly;
+    align-items: flex-end;
+   
+}
+#plate{
+    width: 230px;
+    height: 233px;
+}
+#plate img{
+    transform: scale(1.4);
+    border-radius: 10px;
+    box-shadow: 21px -20px 25px -4px lightblue;
+}
+#fork , #knife,#plate{
+    margin: 0;
+}
+
+/*change page*/
+nav{
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+a{
+    text-decoration: none;
+}
+a:link{
+    color:rgb(0, 140, 255);
+}
+a:visited{
+     color:rgb(0, 100, 100);
+}
+ a:hover{
+    font-size: 2em;
+    transition: 8s;
+}
+
+
+#copyright{
+    margin-top: 3em;
+    font-size: 15px;
+    text-shadow: 2px -1px 1px cyan;
+    text-align: justify;
+}
+#copyright a:hover{
+    font-size: 15px;
+}
+
+@media screen and (max-width:800px){
+    #fork, #knife{display: none;}
+    #plate {
+
+    box-sizing: border-box;}
+    #plate img{
+        box-shadow: none;
+    }
+    #homepage{ margin:auto; margin-top: 2em;}
+    a:hover{
+        font-size: 1em;
+    }
+    #feedback{
+        font-size: 1.2em;
+        position: fixed;
+        top: 1em;
+        right: 1.7em;
+        color: red;
+        transform: none;
+    }
+}

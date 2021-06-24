@@ -1,0 +1,76 @@
+html{
+    background: rgb(241, 232, 221);
+    background: linear-gradient(180deg, rgba(241, 232, 221, 1) 35%, rgba(173, 255, 255, 1) 95%);
+    background-repeat: no-repeat;
+    height: 100%;
+    text-align: center;
+}
+
+header{
+    font-style:italic;
+    font-size: 1.5rem;
+    color: hsl(286, 84%, 49%); 
+}
+
+h1{
+    color: rgb(255, 0, 0);
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Kaushan Script', cursive;
+
+}
+
+.details{
+    color: hsl(180, 51%, 15%) ;
+    font-size:2rem ;
+    border: 1.75rem double darkblue;
+    border-radius: 100px;
+
+    width: 80%;
+    margin:auto;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    overflow: auto;
+
+}
+
+nav img {
+    width: 400px;
+    border: 7.5px ridge rgb(89, 255, 202);
+    border-radius: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+a:link{
+    color:rgb(0, 140, 255);
+}
+a:visited{
+     color:rgb(0, 100, 100);
+}
+ a:hover{
+    font-size: 2em;
+    transition: 10s;
+}
+
+
+#copyright{
+    text-align: left;
+    margin-top: 3em;
+    font-size: 15px;
+    text-shadow: 2px -2px 3px slategrey;
+}
+#copyright a:hover{
+    font-size: 15px;
+}
+#watermark{
+    display: block;
+    font-size: 12px;
+    padding-right: 15px;
+}
+video{
+    height: 300px;
+    width: 450px;
+}

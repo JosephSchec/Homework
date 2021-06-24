@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/icons/favicon-16x16.png">
+    <link rel="manifest" href="Images/icons/site.webmanifest">
+    <link rel="mask-icon" href="Images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <title>Feedback</title>
+    <style>
+        html {
+            background-image: url("Images/background.png");
+        }
+
+        body {
+            background: linear-gradient(180deg, rgba(241, 232, 221, 1) 25%, rgba(173, 255, 255, 1) 100%);
+            width: 80%;
+            margin: auto;
+            box-sizing: border-box;
+            margin-top: 2em;
+            margin-bottom: 2em;
+
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(173, 81, 14, 0.596);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            color: gray;
+            text-decoration: underline
+        }
+
+        form {
+            width: 600px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            margin: 1em;
+        }
+
+        input,
+        textarea {
+            display: block;
+            box-sizing: border-box;
+            margin: auto;
+            width: 60%;
+        }
+
+        img {
+            display: block;
+            width: 65%;
+            margin: auto;
+
+        }
+
+        #comments {
+            height: 5em;
+            width: 60%;
+            border-radius: 18px;
+            font-family: cursive;
+            color: darkblue;
+            font-size: 18px;
+        }
+
+        label[for="comments"] {
+            margin-top: 3em;
+        }
+
+        .button input {
+            margin-top: 2em;
+            padding: 0;
+            background-color: slateblue;
+            width: 25%;
+            height: 3em;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">Return to Homepage</a>
+    <h1>Please Leave Feedback</h1>
+    <form action="feedback.php" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" minlength="6" placeholder="Please enter full name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="Visit">What Date Did You Visit Us? </label>
+        <input type="date" name="Visit" id="Visit" min="2000-01-01" required>
+
+        <label for="rating">How Would You Rate Your Visit</label>
+        <input type="range" name="rating" id="rating" min="1" max="5" value="5">
+        <img src="Images/star.png">
+
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments"></textarea>
+        <div class="button">
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+</html>
