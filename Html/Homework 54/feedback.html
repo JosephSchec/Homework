@@ -38,6 +38,11 @@
             text-decoration: underline
         }
 
+        form {
+            width: 600px;
+            margin: auto;
+        }
+
         label {
             display: block;
             text-align: center;
@@ -72,12 +77,13 @@
             margin-top: 3em;
         }
 
-        input[type="submit"] {
+        .button input {
             margin-top: 2em;
             padding: 0;
             background-color: slateblue;
             width: 25%;
             height: 3em;
+            margin: auto;
         }
     </style>
 </head>
@@ -101,7 +107,9 @@
 
         <label for="comments">Comments</label>
         <textarea name="comments" id="comments"></textarea>
-        <input type="submit">
+        <div class="button">
+            <input type="submit">
+        </div>
     </form>
 </body>
 
