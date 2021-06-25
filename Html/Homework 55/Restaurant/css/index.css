@@ -105,11 +105,13 @@ a:visited{
 #copyright a:hover{
     font-size: 15px;
 }
+#copyright a:link{
+    color: black;
+}
 
 @media screen and (max-width:800px){
     #fork, #knife{display: none;}
     #plate {
-
     box-sizing: border-box;}
     #plate img{
         box-shadow: none;
