@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(50px, 75px));
+            grid-auto-rows: 75px;
+            justify-content: center;
+        }
+
+        .orange {
+            background-color: rgb(255, 102, 0);
+            grid-column: 6;
+            grid-row: 1/5;
+            order: 5;
+        }
+
+        .oranger {
+            background-color: rgb(255, 102, 0);
+            grid-column: 7;
+            grid-row: 1/4;
+        }
+
+        .green {
+            background-color: green;
+            grid-column: 2/7;
+            grid-row: 4/6;
+            order: 3;
+        }
+
+        .maroon {
+            background-color: maroon;
+            grid-column: 6/8;
+            grid-row: 5/9;
+            order: 2;
+        }
+
+        .purple {
+            background-color: purple;
+            grid-column: 7/12;
+            grid-row: 4/6;
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orange"></div>
+    <div class="oranger"></div>
+    <div class="green"></div>
+    <div class="maroon"></div>
+    <div class="purple"></div>
+</body>
+
+</html>
