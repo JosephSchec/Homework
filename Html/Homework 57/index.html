@@ -20,6 +20,10 @@
         h1 {
             color: #3d4c5a;
         }
+
+        .nav-link:hover {
+            background-color: #2c93e7;
+        }
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -40,7 +44,7 @@
 
     <div class="container-fluid">
         <div class="py-4 row justify-content-center">
-            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 200px;">
+            <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
                 <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                     <svg class="bi me-2" width="40" height="32">
                         <use xlink:href="#bootstrap" />
@@ -77,10 +81,10 @@
 
             </div>
             <div class="col-5 ">
-                <div class="card  " style="width: 100%; height: 100%;">
-                    <img src="images/cardphoto.png" class="card-img-top img-fluid-center" alt="...">
+                <div class="card " style="width: 100%;">
+                    <img src="images/cardphoto.png" class="card-img-top img-fluid " alt="...">
                     <div class="card-body">
-                        <p class="card-text text-center align-content-center">Hello I'm Yossi, Welcome To My Portfolio
+                        <p class="card-text text-center">Hello I'm Yossi, Welcome To My Portfolio
                         </p>
                     </div>
                 </div>
@@ -112,19 +116,22 @@
                                             <li class="text-center list-group-item accordion-button bg-dark text-white fs-2"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseJava"
                                                 aria-expanded="true" aria-controls="collapseJava" id="JavaHeading">Java
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                                </svg>
                                             </li>
                                         </h2>
                                         <div id="collapseJava" class="accordion-collapse  collapse show"
                                             aria-labelledby="JavaHeading" data-bs-parent="#Java">
-                                            <div class="accordion-body fs-5">
-                                                <strong>Java Skills: </strong> Lorem ipsum dolor sit amet
-                                                consectetur
-                                                adipisicing elit. Adipisci vero iure explicabo est sed quos dolores!
-                                                Modi deleniti nobis
-                                                molestiae expedita ex possimus necessitatibus labore? Lorem ipsum dolor
-                                                sit, amet
-                                                consectetur adipisicing elit. Deserunt mollitia ut explicabo incidunt?
-                                                Labore eos?
+                                            <div class="accordion-body fs-5 justify-content-center">
+                                                <strong>Java Skills: </strong>
+                                                <ul>
+                                                    <li>OOP</li>
+                                                    <li>Database Connection with JDBC</li>
+                                                    <li>File Creation</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -133,19 +140,22 @@
                                             <li class="text-center list-group-item bg-dark text-white fs-2"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseSQL"
                                                 aria-expanded="true" aria-controls="collapseSQL" id="SQLHeading">SQL
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                                </svg>
                                             </li>
                                         </h2>
                                         <div id="collapseSQL" class="accordion-collapse  collapse"
                                             aria-labelledby="SQLHeading" data-bs-parent="#SQL">
-                                            <div class="accordion-body fs-5">
-                                                <strong>SQL and Database Knowledge: </strong> Lorem ipsum dolor sit amet
-                                                consectetur
-                                                adipisicing elit. Adipisci vero iure explicabo est sed quos dolores!
-                                                Modi deleniti nobis
-                                                molestiae expedita ex possimus necessitatibus labore? Lorem ipsum dolor
-                                                sit, amet
-                                                consectetur adipisicing elit. Deserunt mollitia ut explicabo incidunt?
-                                                Labore, eos?
+                                            <div class="accordion-body fs-5 justify-content-center">
+                                                <strong>SQL and Database Knowledge: </strong>
+                                                <ul>
+                                                    <li>Creating/Designing Databases</li>
+                                                    <li>Execute Queries</li>
+                                                    <li>Execute Updates</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -154,21 +164,21 @@
                                             <li class="text-center list-group-item accordion-button bg-dark text-white fs-2"
                                                 data-bs-toggle="collapse" data-bs-target="#collapsePython"
                                                 aria-expanded="true" aria-controls="collapsePython" id="pythonHeading">
-                                                Python
+                                                Python <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                                </svg>
                                             </li>
                                         </h2>
                                         <div id="collapsePython" class="accordion-collapse  collapse"
                                             aria-labelledby="pythonHeading" data-bs-parent="#python">
                                             <div class="accordion-body fs-5">
-                                                <strong>Python Ability: </strong> Lorem ipsum dolor sit amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Alias a eaque aut quisquam commodi, architecto suscipit neque impedit?
-                                                Voluptatibus nemo
-                                                sunt porro rerum ipsam beatae.
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim
-                                                aliquam
-                                                voluptat es maxime possimus debitiss.
+                                                <strong>Python Ability: </strong>
+                                                <ul>
+                                                    <li>Familiar with Libraries</li>
+                                                    <li>Familiar with Automation</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
@@ -177,25 +187,26 @@
                                             <li class="text-center list-group-item accordion-button bg-dark text-white fs-2"
                                                 data-bs-toggle="collapse" data-bs-target="#collapseHtml"
                                                 aria-expanded="true" aria-controls="collapseHtml" id="htmlHeading">
-                                                HTML/CSS
+                                                HTML/CSS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M3.204 5h9.592L8 10.481 3.204 5zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                                                </svg>
                                             </li>
                                         </h2>
                                         <div id="collapseHtml" class="accordion-collapse  collapse"
                                             aria-labelledby="htmlHeading" data-bs-parent="#html">
                                             <div class="accordion-body fs-5">
-                                                <strong>HTML / CSS: </strong> Lorem ipsum dolor sit amet consectetur
-                                                adipisicing
-                                                elit.
-                                                Alias a eaque aut quisquam commodi, architecto suscipit neque impedit?
-                                                Voluptatibus nemo
-                                                sunt porro rerum ipsam beatae.
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda enim
-                                                aliquam
-                                                voluptates maxime possimus debitis.
+                                                <strong>HTML / CSS: </strong>
+                                                <ul>
+                                                    <li>Webpage Layout</li>
+                                                    <li>Css Grid</li>
+                                                    <li>Flexbox</li>
+                                                    <li>Bootstrap</li>
+                                                </ul>
                                             </div>
                                         </div>
                                     </div>
-
                                 </ul>
                             </div>
                         </div>
@@ -214,36 +225,38 @@
             </div>
         </header>
         <div class="container text-center" id="contact">
-            <a class="nav-link p-2" href="https://github.com/JosephSchec" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" class="" viewBox="0 0 512 499.36"
-                    role="img">
-                    <title>GitHub</title>
-                    <path fill="white" fill-rule="evenodd"
-                        d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
-                    </path>
-                </svg>
-                <small class="d-md-none ms-2">GitHub</small>
-            </a>
-            <a class="nav-link p-2" href="https://www.linkedin.com/in/jschec/" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="white" class="bi bi-linkedin"
-                    viewBox="0 0 16 16">
-                    <title>LinkedIn</title>
-                    <path
-                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                </svg>
-                <small class="d-md-none ms-2">LinkedIn</small>
-            </a>
-            <a class="nav-link p-2" href="mailto: shecky522@gmail.com" target="_blank" rel="noopener">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-envelope"
-                    viewBox="0 0 16 16">
-                    <title>Email</title>
-                    <path
-                        d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
-                </svg>
-                <small class="d-md-none ms-2">Email</small>
-            </a>
+            <div class="row justify-content-between">
+                <a class="nav-link p-2 col-3" href="https://github.com/JosephSchec" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" class="" viewBox="0 0 512 499.36"
+                        role="img">
+                        <title>GitHub</title>
+                        <path fill="white" fill-rule="evenodd"
+                            d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                        </path>
+                    </svg>
+                    <small class="d-md-none ms-2">GitHub</small>
+                </a>
+                <a class="nav-link p-2  col-3" href="https://www.linkedin.com/in/jschec/" target="_blank"
+                    rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-linkedin"
+                        viewBox="0 0 16 16">
+                        <title>LinkedIn</title>
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                    </svg>
+                    <small class="d-md-none ms-2">LinkedIn</small>
+                </a>
+                <a class="nav-link p-2 col-3" href="mailto: shecky522@gmail.com" target="_blank" rel="noopener">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="white" class="bi bi-envelope"
+                        viewBox="0 0 16 16">
+                        <title>Email</title>
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                    </svg>
+                    <small class="d-md-none ms-2 ">Email</small>
+                </a>
+            </div>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
