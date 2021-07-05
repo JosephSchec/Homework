@@ -1,0 +1,169 @@
+body{
+  font-family: Helvetica , Arial, sans-serif;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.navbar ul{
+    display: flex;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 3em;
+    align-items: center;
+}
+.navbar ul li a{
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}    
+.navbar ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+header{ 
+    background-color: rgb(184, 181, 181);
+    font-weight: bold; 
+    font-size: 2.5em;
+    text-align: center;
+    border-radius:10px;
+    grid-column: 2/12;
+    grid-row: 1 / 4; 
+    text-transform: uppercase;
+}
+span{
+    display: block;
+    margin-top: .5em;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+header span{
+    font-weight: bold;
+}
+footer{
+    display: flex;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding-left: 2em;
+    height: 3em;
+    align-items: center;
+    color: white;
+}
+article{
+    text-align: justify;
+}
+
+#product, #finacial, #aboutUs ,caption{
+    font-weight:bold;
+    font-size: 2em;
+}
+.products {
+    grid-row: 5;
+    grid-column: 2/12;
+
+}
+.products ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.products li p:nth-child(1){
+    font-weight: bold;
+}
+.products img , .products video{
+    width: 100%;
+}
+#signup{
+background-color: rgb(184, 181, 181);
+grid-column:2/12;
+grid-row: 6;
+border-radius: 15px;
+padding: 2em;
+text-align: center;
+}
+#signup p{
+   font-weight:bold;
+   font-size: 2em;
+}
+
+#signup input{
+    box-shadow: 2px 2px 4px 2px black;
+    border-radius: 10px;
+}
+#signup label{
+    display: block;
+    margin: 1em;
+}
+.finacials{
+    grid-row: 7;
+    grid-column: 2/12;
+}
+table{
+     border-collapse: collapse;
+}
+#table{
+    grid-row: 8;
+    grid-column: 2/12;
+    overflow-x: auto;
+}
+#table thead th{
+    padding: 1em;
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+#table td{ 
+    text-align: right;
+    border: 1px solid black;
+
+}
+tbody tr:nth-child(odd){
+    background-color: rgb(184, 181, 181);
+}
+tbody tr:hover{
+    background-color: lightblue;
+}
+td:last-child , th:last-child{
+    color: red;
+}
+tr td:first-child{
+    font-weight: bold;
+}
+.about{
+    grid-row: 9;
+    grid-column: 2/12;
+}
+@media  screen and (min-width:1000px) {
+    #signup label{
+        display: inline;
+    }
+
+    .products ul{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1em;
+} 
+
+.products ul li:nth-child(2){
+    padding-left: 1em;
+    padding-right: 1em;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+#table table{
+    margin: auto;
+    width: auto;
+    }
+}
