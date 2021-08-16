@@ -13,16 +13,13 @@ console.log(days.numberToDay(6));
 // 2
 const interest = (function (principle) {
     return {
-        setRate: 0.015,
-        setYears: 3,
+        setRate: (r) => r,
+        setYears: (y) => y,
         calculate: function () { return (principle * this.setRate) * this.setYears; }
     };
-})(100);
-
-console.log(interest.calculate());
+})(1000);
 
 interest.setRate = 0.01;
-interest.setYears = 5;
+interest.setYears = 2;
 console.log(interest.calculate());
-
 
