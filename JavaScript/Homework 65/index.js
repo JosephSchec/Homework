@@ -9,12 +9,10 @@
     function createColor() {
         return `rgb(${random()},${random()},${random()})`;
     }
-    
     function changeIt() {
         setCss(document.body, 'color', createColor());
         setCss(document.body, 'backgroundColor', createColor());
     }
-
 
     const btn = document.getElementById('button');
     let intervalId;
