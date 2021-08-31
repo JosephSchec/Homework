@@ -18,6 +18,7 @@
     const emailInput = get('Email');
     const phoneInput = get('Phone');
 
+    // removes first line once if first contact is loaded
     let firstLineRemoved = true;
 
     get('addBtn').addEventListener('click', () => {
@@ -64,10 +65,12 @@
                 myContacts.pop(myContacts.indexOf(row));
             }
             if (myContacts.length === 0) {
-                myTable.insertRow().insertCell().innerText = 'no contacts loaded';
+                let firstRowReset = myTable.insertRow();
+                firstRowReset.innerText = 'no contacts loaded';
+                firstRowReset.style.border = '1px Solid Black';
+                firstLineRemoved = true;
             }
         });
-
     });
     get('cancel').addEventListener('click', () => {
         hideResetForm();
