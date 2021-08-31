@@ -32,7 +32,6 @@
             firstLineRemoved = false;
         }
 
-
         const newContact = {
             first: firstInput.value,
             last: lastInput.value,
@@ -42,7 +41,6 @@
         myContacts.push(newContact);
 
         hideResetForm();
-
 
         const row = myTable.insertRow();
         const firstNameCell = row.insertCell();
@@ -64,10 +62,14 @@
             if (myContacts.indexOf(row)) {
                 myTable.deleteRow(myContacts.indexOf(row));
                 myContacts.pop(myContacts.indexOf(row));
-
             }
-
+            if (myContacts.length === 0) {
+                myTable.insertRow().insertCell().innerText = 'no contacts loaded';
+            }
         });
-    });
 
+    });
+    get('cancel').addEventListener('click', () => {
+        hideResetForm();
+    });
 }());
