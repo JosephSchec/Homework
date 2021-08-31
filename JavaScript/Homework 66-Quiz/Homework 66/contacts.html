@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 1em;
+        }
+
+        .formGroup {
+            margin-bottom: .5em;
+        }
+
+        label {
+            width: 3em;
+            display: inline-block;
+        }
+
+        #myForm,
+        #deleteForm {
+            /* display: none;*/
+            background-color: lightblue;
+            padding: 1em;
+            box-sizing: border-box;
+            width: 17em;
+            height: 10em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -5em;
+            margin-left: -8.5em;
+            display: none;
+        }
+
+        #deleteForm {
+            height: 15em;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="addBtn">Add Contact</button>
+    <table id="contactsTable">
+        <thead>
+            <tr>
+                <th>First</th>
+                <th>Last</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4">no contacts loaded</td>
+            </tr>
+        </tbody>
+    </table>
+    <form id="myForm">
+        <div class="formGroup">
+            <label for="First">First</label>
+            <input id="First" required>
+        </div>
+        <div class="formGroup">
+            <label for="Last"> Last</label>
+            <input id="Last" required>
+        </div>
+        <div class="formGroup">
+            <label for="Email">Email </label>
+            <input id="Email" type="email">
+        </div>
+        <div class="formGroup">
+            <label for="Phone">Phone</label>
+            <input id="Phone" type="number">
+        </div>
+        <div>
+            <button>add</button>
+            <button id="cancel" type="button">Cancel</button>
+        </div>
+    </form>
+  
+    <script src="contacts.js"></script>
+</body>
+
+</html>
