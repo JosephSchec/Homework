@@ -52,7 +52,4 @@
             btn.innerText = 'Restart The Show';
         }
     });
-
-
-
 }());

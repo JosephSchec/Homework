@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #display {
+            background-color: lightblue;
+            padding: 1em;
+            box-sizing: border-box;
+            width: 17em;
+            height: 12em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -5em;
+            margin-left: -8.5em;
+            font-weight: bold;
+            text-transform: capitalize;
+            overflow-wrap: break-word;
+            box-shadow: 0px 0px 16px 2px red;
+            display: none;
+        }
+
+        #textArea {
+            width: 80%;
+            height: 5em;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        #alertButton {
+            position: relative;
+            right: 0;
+            top: 6em;
+            left: 0;
+            margin: auto;
+            display: block;
+        }
+
+        #okBtn {
+            left: 0;
+            right: 0;
+            margin: auto;
+            display: block;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form">
+        <div>
+            <textarea name="textArea" id="textArea" placeholder="Alert Text Here"></textarea>
+        </div>
+        <button id='alertButton'>Alert</button>
+    </form>
+    <div id="display">
+        <p id="alert"></p>
+        <button id='okBtn'>Ok</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -24,7 +24,7 @@
         } else {
             clearInterval(intervalId);
             intervalId = undefined;
-            btn.innerText = 'Restart The Show';
+            btn.innerText = 'Restart The Show'; 
         }
     });
 }());
