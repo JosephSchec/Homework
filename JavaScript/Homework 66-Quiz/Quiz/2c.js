@@ -4,7 +4,7 @@
     for (let i = 0; i < 10; i++) {
         window.app.increment();
     }
-    window.app.getCurCount();
+    window.app.getCurCount(); // SL - I asked for all counts at end (to prove that theey dont change accidentially by other code)
 
     //file 2b
     let counter1 = window.app.createCounter();
@@ -21,3 +21,6 @@
     //keeps track
     window.app.logHowMany();
 }());
+
+// SL - nice
+// SL - grade - 93

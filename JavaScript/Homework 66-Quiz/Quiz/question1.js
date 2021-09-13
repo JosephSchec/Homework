@@ -13,3 +13,5 @@
     const doubleArr = [1, 2, 3, 4];
     console.log(myMap(doubleArr, n => n * 2));
 }());
+
+// SL - nice
