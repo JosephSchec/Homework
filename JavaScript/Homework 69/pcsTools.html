@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+
+</head>
+
+<body id="body">
+    <h1 class="gov" id="joe">Joe Biden</h1>
+    <h1 class="gov" id="kamala">Kamala Harris</h1>
+
+
+    <script src="pcsTools.js"></script>
+    <script>
+
+        let body = window.pcs('body')
+        body.colorChange(20000, 1000);
+
+        let joe = window.pcs('joe')
+        joe.data('foo', 5);
+        console.log(joe.data('foo'));
+
+        let kamala = window.pcs('kamala')
+        kamala.data('bar', 'something else');
+        console.log(kamala.data('bar'));
+    </script>
+</body>
+
+</html>
