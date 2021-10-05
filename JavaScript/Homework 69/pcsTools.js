@@ -53,11 +53,10 @@ window.pcs = function (id) {
         }, data: function (key, value) {
             if (value !== undefined) {
                 theEl.obj = {
-                    myKey: key,
-                    myValue: value
+                    key: value
                 };
             }
-            return theEl.obj.myValue;
+            return theEl.obj.key;
         }
     };
 };
