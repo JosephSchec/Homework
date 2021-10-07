@@ -2,14 +2,15 @@
 window.clock = (function () {
     "use strict";
     const $ = window.jQuery;
-    function createClock() {
+    function createClock(parent = 'body') {
+        //parent =parent || 'body'
         $(`<div id="clock">
-        <div class="hour"></div>
-        <span>:</span>
-        <div class="min"></div>
-        <span>:</span>
-        <div class="sec"></div>
-    </div>`).appendTo('body');
+                <div class="hour"></div>
+                <span>:</span>
+                <div class="min"></div>
+                <span>:</span>
+                <div class="sec"></div>
+            </div>`).appendTo(parent);
     }
 
     function setClock() {
@@ -22,8 +23,9 @@ window.clock = (function () {
         $('.sec').text(seconds);
     }
     return {
-        create: function () {
-            createClock();
+        create: function (parent) {
+            createClock(parent);
+            setClock();
             setInterval(() => setClock(), 1000);
         }
     };
