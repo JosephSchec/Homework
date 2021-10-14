@@ -12,11 +12,11 @@
        </form>`).appendTo('body');
     }
     function displayText() {
-        $('#submit').click((e) => {
+        $('form').submit((e) => {
             e.preventDefault();
-            if ($('#check').prop("checked")) {
-                let name = $('#name');
-                let add = $('#address');
+            let name = $('#name');
+            let add = $('#address');
+            if ($('#check').prop("checked") && name.val().trim() !== '' && add.val().trim() !== '') {
                 $('<div></div>').appendTo('body').text(`Name: ${name.val()} Address: ${add.val()}`);
                 add.val('');
                 name.val('');
