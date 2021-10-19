@@ -1,6 +1,6 @@
 (function () {
     "use strict";
-    const $ = window.jQuery;
+    const $ = jQuery;
     function setForm() {
         $(`<form>
             <label for="name">Name:</label>

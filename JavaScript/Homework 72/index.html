@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        div {
+            text-align: center;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="recipes">Recipes:</label>
+        <select name="recipes" id="recipes">
+            <option value="Sugar Cookies">Sugar Cookies</option>
+            <option value="Chocolate Chip Cookies">Chocolate Chip Cookies</option>
+            <option value="Cinnamon Cookies">Cinnamon Cookies</option>
+        </select>
+
+        <h1 id="chosen"></h1>
+        <img id="img" width="450px" height="300">
+        <h1>Ingredients</h1>
+        <ul id="list"></ul>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=index.js></script>
+</body>
+
+</html>
