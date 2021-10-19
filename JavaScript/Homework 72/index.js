@@ -15,7 +15,6 @@
             }
             const myRecipes = await items.json();
 
-            console.log('object');
             list.empty();
             chosen.text(selected.val());
             const rec = myRecipes.filter(recipe => recipe.name === selected.val())[0];
