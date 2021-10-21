@@ -27,7 +27,7 @@
             });
         });
     }
-    
+
     setMainPage();
 
     async function videoPage(name) {

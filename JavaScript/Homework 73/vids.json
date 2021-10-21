@@ -1,18 +1,17 @@
 [
     {
-        "title":"ElHanaarHazeh",
-        "url":"/media/ElHanaarHazeh.mp4",
-        "img":"/media/ElHanaarHazeh.jpg"
+        "title": "ElHanaarHazeh",
+        "url": "/media/ElHanaarHazeh.mp4",
+        "img": "/media/ElHanaarHazeh.jpg"
+    },
+    {
+        "title": "kolzman",
+        "url": "/media/kolzman.mp4",
+        "img": ""
+    },
+    {
+        "title": "yeshtikvah",
+        "url": "/media/yeshtikvah.mp4",
+        "img": "/media/yeshtikvah.jpg"
     }
-    ,{
-        "title":"kolzman",
-        "url":"/media/kolzman.mp4",
-        "img":""
-    }
-    ,{
-        "title":"yeshtikvah",
-        "url":"/media/yeshtikvah.mp4",
-        "img":"/media/yeshtikvah.jpg"
-    }
-    
 ]
