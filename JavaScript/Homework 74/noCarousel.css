@@ -1,0 +1,53 @@
+
+  #mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow: auto;
+    justify-content: space-evenly;
+    margin: 0 1em;
+}
+.img {
+    padding: 1em;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 9999px;
+    background-color: #AAAAAA;
+}
+
+::-webkit-scrollbar-track {
+    margin-bottom: 7em;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 7em;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+figcaption {
+    background-color: aliceblue;
+}
+
+figure:hover {
+    box-shadow: 0px -1px 5px 0px grey;
+    transition: 2s;
+}
+#previous,
+#next,
+#centerContainer {
+    display: none;
+}

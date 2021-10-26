@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="noCarousel.css"-->
+    <link rel="stylesheet" href="carousel.css">
+    <title>Title</title>
+    <Style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding-bottom: 100px;
+            margin-top: 1em;
+            overflow: hidden;
+            background-color: antiquewhite;
+        }
+
+        #searchDiv {
+            padding-top: 1em;
+            display: flex;
+            justify-content: center;
+        }
+
+        #search {
+            width: 25%;
+            height: 2em;
+            margin-bottom: 1em;
+        }
+
+        input:focus::placeholder {
+            color: transparent;
+        }
+
+        #btn {
+            height: 2.5em;
+            margin-left: 1em;
+        }
+
+        #default {
+            font-size: 1.8em;
+            color: steelblue;
+        }
+
+        span {
+            font-style: italic;
+            display: block;
+            font-size: .5em;
+            color: lightcoral;
+        }
+
+        
+    </Style>
+</head>
+
+<body>
+
+    <div id="searchDiv">
+        <input id="search" placeholder="Search Here">
+        <button id="btn">Search</button>
+    </div>
+
+
+    <div id="mainContainer">
+        <div id="previous"><img
+                src="https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png"
+                alt=""></div>
+        <div id="centerContainer"></div>
+        <div id="next"><img
+                src="https://icons-for-free.com/iconfiles/png/512/arrow+left+chevron+chevronleft+left+left+icon+icon-1320185731545502691.png"
+                alt=""></div>
+        <p id="default">Please Search For Some Pictures <span>Examples include Kotel,Jerusalem etc.</span> </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=index.js></script>
+</body>
+
+</html>
