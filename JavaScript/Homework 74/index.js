@@ -25,20 +25,20 @@
             });
     }
 
-   /* function setTopage() {
-        let val = search.val();
-        if (val !== '') {
-            search.val('');
-            container.empty();
-            myArray.forEach(item => {
-                $(`<figure>
-                        <img class="img" id="${item.title}" src="${item.url}" onerror="${$(this).css('display', 'none')}">
-                        <figcaption>${item.title}</figcaption>
-                    </figure>`).appendTo(container);
-                myArray = [];
-            });
-        }
-    }*/
+    /* function setTopage() {
+         let val = search.val();
+         if (val !== '') {
+             search.val('');
+             container.empty();
+             myArray.forEach(item => {
+                 $(`<figure>
+                         <img class="img" id="${item.title}" src="${item.url}" onerror="${$(this).css('display', 'none')}">
+                         <figcaption>${item.title}</figcaption>
+                     </figure>`).appendTo(container);
+                 myArray = [];
+             });
+         }
+     }*/
     function middleOfCarousel(num) {
 
         const center = $('#centerContainer');
