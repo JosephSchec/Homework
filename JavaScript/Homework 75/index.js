@@ -2,12 +2,18 @@
 (function () {
     "use strict";
     async function loadPlaces() {
-        const response = await fetch(`http://api.geonames.org/wikipediaSearchJSON?q=${$('#search').val()}&maxRows=10&username=shecky`);
-        if (!response.ok) {
-            throw new Error('NOT FOUND');
+        try {
+            const response = await fetch(`http://api.geonames.org/wikipediaSearchJSON?q=${$('#search').val()}&maxRows=10&username=shecky`);
+            if (!response.ok) {
+                throw new Error('NOT FOUND');
+            }
+            return await response.json();
+        } catch (error) {
+            console.log(error);
         }
-        return await response.json();
+
     }
+
     let location = { lat: 40.10890698677386, lng: -74.2177383733953 };
     new google.maps.StreetViewPanorama(document.getElementById("pano"), {
         position: location,
@@ -17,6 +23,9 @@
         zoom: 8,
         center: location,
     });
+
+    const bounds = new google.maps.LatLngBounds();
+
     async function setPages() {
         $('#pano').empty();
         const places = await loadPlaces();
@@ -35,8 +44,8 @@
                 map: map,
                 title: plc.title
             });
-            const infoWindow = new google.maps.InfoWindow();
 
+            const infoWindow = new google.maps.InfoWindow();
             marker.addListener('click', () => {
                 infoWindow.setContent(`
                 <h1>${plc.title}</h1>
@@ -44,13 +53,20 @@
                 <br>
                 <a href="https://${plc.wikipediaUrl}" target="_blank">more info</a>`);
                 infoWindow.open(map, marker);
+                $("#pano").empty();
+                new google.maps.StreetViewPanorama(document.getElementById("pano"), {
+                    position: { lat: plc.lat, lng: plc.lng },
+                });
             });
 
-            const bounds = new google.maps.LatLngBounds();
+
             bounds.extend(placeLocation);
-            map.fitBounds(bounds);
+
             map.setZoom(9);
         });
+
+        map.fitBounds(bounds);
+
         $(`.place`).on('click', function () {
             place.forEach(p => {
                 if (this.id === p.title) {
@@ -58,6 +74,7 @@
                     new google.maps.StreetViewPanorama(document.getElementById("pano"), {
                         position: { lat: p.lat, lng: p.lng },
                     });
+                    map.panTo({ lat: p.lat, lng: p.lng });
                 }
             });
         });
