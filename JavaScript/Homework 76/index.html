@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        html,
+        body,
+        #map,
+        #pano {
+            text-align: center;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map,
+        #pano {
+            float: left;
+            width: 50%;
+        }
+
+        #search,
+        #go {
+            position: absolute;
+            top: 10px;
+            left: 189.300px;
+            height: 40px;
+            z-index: 999;
+            margin: 0;
+            margin-left: 1em;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        #go {
+            left: 368.3px;
+        }
+
+        #pano {
+            overflow: auto;
+        }
+
+        .place {
+            margin-bottom: 1em;
+            margin-top: 1em;
+            border: 1px solid black;
+        }
+
+        #imgPLace {
+            height: 55px;
+            float: left;
+        }
+
+        #back {
+            position: absolute;
+            top: 4em;
+            right: 0.5em;
+            z-index: 999;
+            height: 40px;
+            display: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="search" placeholder="Search">
+    <button id="go">Go</button>
+    <div id="map"></div>
+    <div id="pano"></div>
+    <button id="back">back</button>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy4jlSTHR4p9hVpNhQoLHASQnusMh5k3s&v=weekly&libraries=drawing"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </script>
+
+    <script src=index.js></script>
+</body>
+
+</html>
