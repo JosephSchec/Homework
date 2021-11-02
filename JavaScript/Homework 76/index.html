@@ -10,11 +10,16 @@
         html,
         body,
         #map,
-        #pano {
+        #pano,
+        #all {
             text-align: center;
             height: 100%;
             margin: 0;
             padding: 0;
+        }
+
+        #all {
+            position: relative;
         }
 
         #map,
@@ -68,12 +73,15 @@
 </head>
 
 <body>
-    <input id="search" placeholder="Search">
-    <button id="go">Go</button>
-    <div id="map"></div>
-    <div id="pano"></div>
-    <button id="back">back</button>
-    <script src="https://maps.googleapis.com/maps/api/js?key=<YOUR API KEY>&v=weekly&libraries=drawing"></script>
+    <div id="all">
+        <input id="search" placeholder="Search">
+        <button id="go">Go</button>
+        <div id="map"></div>
+        <div id="pano"></div>
+        <button id="back">back</button>
+    </div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=<API KEY>&v=weekly&libraries=drawing"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     </script>
