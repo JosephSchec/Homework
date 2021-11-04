@@ -15,6 +15,7 @@
     }
 
     let location = { lat: 40.10890698677386, lng: -74.2177383733953 };
+
     new google.maps.StreetViewPanorama(document.getElementById("pano"), {
         position: location,
     });
@@ -57,10 +58,6 @@
                 new google.maps.StreetViewPanorama(document.getElementById("pano"), {
                     position: { lat: plc.lat, lng: plc.lng },
                 });
-
-
-
-
             });
 
             bounds.extend(placeLocation);
@@ -107,12 +104,14 @@
             ],
         },
         markerOptions: {
-            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",editable:true
         },
         circleOptions: {
-            fillColor: "#ffff00",
-            fillOpacity: 1,
-            strokeWeight: 5,
+            strokeColor: "#FF0000",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#FF0000",
+            fillOpacity: 0.35,
             clickable: false,
             editable: true,
             zIndex: 1,
@@ -125,10 +124,9 @@
     const markerArr = JSON.parse(localStorage.getItem("markerArr")) || [];
 
     google.maps.event.addListener(drawingManager, 'markercomplete', e => {
-        const markerJSON = { lat: e.getPosition().lat(), lng: e.getPosition().lng() };
+        const markerJSON = {position:{ lat: e.getPosition().lat(), lng: e.getPosition().lng() }};
         markerArr.push(markerJSON);
         localStorage.setItem('markerArr', JSON.stringify(markerArr));
-
     });
 
     if (localStorage.markerArr) {
@@ -137,8 +135,9 @@
             const mark = JSON.parse(markerData);
             let pos = mark[x];
             new google.maps.Marker({
-                position: { lat: pos.lat, lng: pos.lng },
-                map: map,
+                position: pos.position,
+                map: map, 
+                editable: true,
             });
         }
     }
@@ -166,7 +165,8 @@
                 fillOpacity: 0.35,
                 map,
                 center: pos.center,
-                radius: pos.radius
+                radius: pos.radius, 
+                editable: true,
             });
         }
     }
@@ -198,7 +198,7 @@
                     south: pos.south,
                     west: pos.west,
                     east: pos.east
-                }
+                }, editable: true
             });
         }
     }
@@ -226,6 +226,7 @@
                 fillColor: "#FF0000",
                 fillOpacity: 0.35,
                 map,
+                editable: true,
             });
         }
     }
@@ -252,6 +253,7 @@
                 strokeOpacity: 1.0,
                 strokeWeight: 2,
                 map,
+                editable: true,
             });
         }
     }
