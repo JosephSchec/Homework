@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #parts {
+            width: 25%;
+            height: 100%;
+            float: left;
+            background-color: navajowhite;
+            overflow-y: auto;
+        }
+
+        .part {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            float: left;
+        }
+
+        #display {
+            width: 75%;
+            height: 100%;
+            background-image: url("media/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            float: right;
+
+        }
+
+        #pBody {
+            position: absolute;
+            top: 50%;
+            right: 170px;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+    <audio src="media/background.mp3" autoplay loop></audio>
+
+    <div id="parts">
+
+    </div>
+    <div id="display">
+        <img src="media/body.png" alt="" class="" id="pBody">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src=index.js></script>
+</body>
+
+</html>

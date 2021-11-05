@@ -104,7 +104,7 @@
             ],
         },
         markerOptions: {
-            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",editable:true
+            icon: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png", editable: true
         },
         circleOptions: {
             strokeColor: "#FF0000",
@@ -124,7 +124,7 @@
     const markerArr = JSON.parse(localStorage.getItem("markerArr")) || [];
 
     google.maps.event.addListener(drawingManager, 'markercomplete', e => {
-        const markerJSON = {position:{ lat: e.getPosition().lat(), lng: e.getPosition().lng() }};
+        const markerJSON = { position: { lat: e.getPosition().lat(), lng: e.getPosition().lng() } };
         markerArr.push(markerJSON);
         localStorage.setItem('markerArr', JSON.stringify(markerArr));
     });
@@ -136,7 +136,7 @@
             let pos = mark[x];
             new google.maps.Marker({
                 position: pos.position,
-                map: map, 
+                map: map,
                 editable: true,
             });
         }
@@ -165,7 +165,7 @@
                 fillOpacity: 0.35,
                 map,
                 center: pos.center,
-                radius: pos.radius, 
+                radius: pos.radius,
                 editable: true,
             });
         }

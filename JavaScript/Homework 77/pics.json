@@ -1,0 +1,26 @@
+{
+    "eyes": [
+        "media/eyes1.png",
+        "media/eyes2.png",
+        "media/leftEye1.png",
+        "media/rightEye1.png"
+    ],
+    "ears": [
+        "media/leftEar1.png",
+        "media/rightEar1.png",
+        "media/leftEar2.png",
+        "media/rightEar2.png"
+    ],
+    "mouth": [
+        "media/mouth1.png",
+        "media/mouth2.png",
+        "media/mouth3.png"
+    ],
+    "nose": [
+        "media/nose1.png",
+        "media/nose2.png"
+    ],
+    "other": [
+        "media/hat1.png"
+    ]
+}
