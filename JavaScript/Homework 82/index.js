@@ -22,17 +22,27 @@
     let gotApple = false;
     class Snake {
         constructor() {
-            this.x = 0;
-            this.y = 0;
+            this.seg = [{ x: 0, y: 0 }];
             this.direction = 'ArrowRight';
 
             document.addEventListener('keydown', event => {
                 switch (event.key) {
                     case 'ArrowUp':
+                        if (this.seg.length === 1 || this.direction !== 'ArrowDown') {
+                            this.direction = event.key;
+                        } break;
                     case 'ArrowDown':
+                        if (this.seg.length === 1 || this.direction !== 'ArrowUp') {
+                            this.direction = event.key;
+                        } break;
                     case 'ArrowLeft':
+                        if (this.seg.length === 1 || this.direction !== 'ArrowRight') {
+                            this.direction = event.key;
+                        } break;
                     case 'ArrowRight':
-                        this.direction = event.key;
+                        if (this.seg.length === 1 || this.direction !== 'ArrowLeft') {
+                            this.direction = event.key;
+                        } break;
                 }
             });
 
@@ -40,13 +50,21 @@
         }
 
         draw() {
-            context.drawImage(snakeHead, this.x, this.y, THING_SIZE, THING_SIZE);
+            context.drawImage(snakeHead, this.seg[0].x, this.seg[0].y, THING_SIZE, THING_SIZE);
+
+            for (let i = 1; i < this.seg.length; i++) {
+                context.fillStyle = 'green';
+                context.fillRect(this.seg[i].x, this.seg[i].y, THING_SIZE, THING_SIZE);
+
+            }
         }
 
         move() {
-            let x = this.x;
-            let y = this.y;
-            let length = 1;
+            let head = this.seg[0];
+            let tail = this.seg.pop();
+            let x = head.x;
+            let y = head.y;
+
 
             switch (this.direction) {
                 case 'ArrowRight':
@@ -65,27 +83,29 @@
 
             if (x < 0 || x > canvas.width - THING_SIZE || y < 0 || y > canvas.height - THING_SIZE) {
                 gameOver = true;
-            } else {
-                this.x = x;
-                this.y = y;
+            }else {
+                tail.x = x;
+                tail.y = y;
+                this.seg.unshift(tail);
             }
 
-            if (this.x === apple.x && this.y === apple.y) {
+            for (let i = 3; i < this.seg.length-1; i++) {
+                if(this.seg[i].x===x&&this.seg[i].y===y){
+                    gameOver=true;
+                } 
+            }
+
+            if (head.x === apple.x && head.y === apple.y) {
+                this.seg.push({ x: tail.x, y: tail.y });
                 score++;
                 speed = speed * 0.9;
                 crunchSound.currentTime = 0;
                 crunchSound.play();
                 apple.move();
-                this.grow();
-                length++;
             }
             this.draw();
         }
-        grow() {
-            gotApple = true;
-            this.move();
-            //NOT FINISHED
-        }
+        
 
     }
 
@@ -122,15 +142,13 @@
 
         snake.move();
         apple.draw();
-        if (gotApple) {
-            snake.grow();
-        }
+
         if (!gameOver) {
             setTimeout(gameLoop, speed);
         } else {
             context.font = 'bold 30px Arial';
             context.fillText('Game Over', canvas.width / 2 - 80, canvas.height / 2);
-            crashSound.currentTime = 0; // in case it was playing
+            crashSound.currentTime = 0;
             crashSound.play();
         }
     }
