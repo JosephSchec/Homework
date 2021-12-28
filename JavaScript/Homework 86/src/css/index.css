@@ -1,0 +1,11 @@
+body{
+    font-size: 18px;
+    width: 80%;
+    margin: auto;
+}
+#hasBackground{
+    width: 100px;
+    height: 100px;
+    background-image: url('../Images/background.png');
+
+}
