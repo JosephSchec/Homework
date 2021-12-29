@@ -1,12 +1,16 @@
-import { THING_SIZE, context, canvas } from "./constants.js";
-import snakeHead from '../media/snake.png';
-import apple from './apple.js';
+import { THING_SIZE } from "./constants.js";
 import crunch from '../media/crunch.mp3';
 const crunchSound = new Audio(crunch);
 
 export default class Snake {
+    constructor(canvas, snakeImg, apple, gameIsOver ,ateApple) {
+        this.canvas = canvas;
+        this.context = canvas.getContext('2d');
+        this.snakeHead = snakeImg;
+        this.apple = apple;
+        this.gameIsOver = gameIsOver;
+        this.ateApple=ateApple;
 
-    constructor() {
         this.seg = [{ x: 0, y: 0 }];
         this.direction = 'ArrowRight';
 
@@ -35,11 +39,11 @@ export default class Snake {
     }
 
     draw() {
-        context.drawImage(snakeHead, this.seg[0].x, this.seg[0].y, THING_SIZE, THING_SIZE);
+        this.context.drawImage(this.snakeHead, this.seg[0].x, this.seg[0].y, THING_SIZE, THING_SIZE);
 
         for (let i = 1; i < this.seg.length; i++) {
-            context.fillStyle = 'green';
-            context.fillRect(this.seg[i].x, this.seg[i].y, THING_SIZE, THING_SIZE);
+            this.context.fillStyle = 'green';
+            this.context.fillRect(this.seg[i].x, this.seg[i].y, THING_SIZE, THING_SIZE);
 
         }
     }
@@ -49,9 +53,8 @@ export default class Snake {
         let tail = this.seg.pop();
         let x = head.x;
         let y = head.y;
-        this.gameOver = false;
-        this.score = 0;
-        this.speed = 500;
+        let gameOver = false;
+        
 
         switch (this.direction) {
             case 'ArrowRight':
@@ -68,8 +71,8 @@ export default class Snake {
                 break;
         }
 
-        if (x < 0 || x > canvas.width - THING_SIZE || y < 0 || y > canvas.height - THING_SIZE) {
-            this.gameOver = true;
+        if (x < 0 || x > this.canvas.width - THING_SIZE || y < 0 || y > this.canvas.height - THING_SIZE) {
+            gameOver = true;
         } else {
             tail.x = x;
             tail.y = y;
@@ -78,17 +81,18 @@ export default class Snake {
 
         for (let i = 3; i < this.seg.length - 1; i++) {
             if (this.seg[i].x === x && this.seg[i].y === y) {
-                this.gameOver = true;
+                gameOver = true;
+            } else {
+                this.gameIsOver();
             }
         }
 
-        if (head.x === apple.x && head.y === apple.y) {
+        if (head.x === this.apple.x && head.y === this.apple.y && !gameOver) {
             this.seg.push({ x: tail.x, y: tail.y });
-            this.score++;
-            this.speed = this.speed * 0.9;
             crunchSound.currentTime = 0;
             crunchSound.play();
-            apple.move();
+            this.apple.move();
+            this.ateApple();
         }
         this.draw();
     }
