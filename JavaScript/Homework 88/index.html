@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        
+        const hw = <h2>This is being loaded with JSX as variable </h2>
+
+        function hello(name) {
+            return `hello ${name}`
+        }
+
+        ReactDOM.render((
+            <>
+                {hw}
+                <h3>{hello('this is being loaded with a function')}</h3>
+                <h3>{`some js todays date is  ${new Date().toLocaleDateString()}`}</h3>
+            </>
+        ),
+            document.getElementById('root')
+        );
+
+    </script>
+
+</body>
+
+</html>
