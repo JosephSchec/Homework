@@ -28,7 +28,19 @@ async function getData(zip) {
     }
 }
 
-export async function getWeather(zip) {
+export async function getDetails(detailsFor, zip) {
+    let data = await getData(zip);
+    if (detailsFor === 'weather') {
+        return `The weather in ${data.name} is ${data.weather[0].main}`;
+    }
+    else if (detailsFor === 'icon') {
+        return `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+    }
+    else if (detailsFor === 'temp') {
+        return ` ${data.main.temp}`
+    }
+}
+/*export async function getWeather(zip) {
     let data = await getData(zip);
     return `The weather in ${data.name} is ${data.weather[0].main}`;
 }
@@ -41,4 +53,4 @@ export async function getIcon(zip) {
 export async function getTemp(zip) {
     const data = await getData(zip);
     return ` ${data.main.temp}`
-}
+}*/
