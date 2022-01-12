@@ -94,3 +94,10 @@ a:link{
 #article{
     font-size: 1.5em;
 }
+
+button{
+    margin: .5em;
+    border-radius: 10px;
+    background-color: #F7D5F4;
+    font-weight: bold;
+}
