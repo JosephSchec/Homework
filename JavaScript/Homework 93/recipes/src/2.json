@@ -1,0 +1,14 @@
+{
+    "name": "Burger",
+    "ingredients": [
+        "bun",
+        "meat",
+        "veggies"
+    ],
+    "directions": [
+        "grill",
+        "set",
+        "eat"
+    ],
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDht4KDgE3sFPzI8Px574uLnqMpOsljLdnKg&usqp=CAU"
+}
