@@ -8,7 +8,7 @@ export default function Price() {
     useEffect(() => {
         (async () => {
             try {
-                const r = await fetch(`https://finnhub.io/api/v1/quote?symbol=${ticker.toUpperCase()}&token=c7onieaad3i94t1inp70&token=c7onieaad3i94t1inp70`)
+                const r = await fetch(`https://finnhub.io/api/v1/quote?symbol=${ticker.toUpperCase()}&token=c7onieaad3i94t1inp70&token=<API_KEY>`)
                 if (!r.ok) {
                     throw new Error(`News: ${r.status} ${r.statusText} `)
                 }

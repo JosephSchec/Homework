@@ -9,8 +9,8 @@ export default function News() {
     useEffect(() => {
         (async () => {
             try {
-                const descResponse = await fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${ticker.toUpperCase()}&token=c7onieaad3i94t1inp70`);
-                const newsResponse = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${ticker.toUpperCase()}&from=2022-01-25&to=2022-01-26&token=c7onieaad3i94t1inp70`)
+                const descResponse = await fetch(`https://finnhub.io/api/v1/stock/profile2?symbol=${ticker.toUpperCase()}&token=<API_KEY>`);
+                const newsResponse = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${ticker.toUpperCase()}&from=2022-01-25&to=2022-01-26&token=<API_KEY>`)
                 if (!descResponse.ok || !newsResponse.ok) {
                     throw new Error(`Desc : ${descResponse.status} ${descResponse.statusText} News: ${newsResponse.status} ${newsResponse.statusText} `)
                 }

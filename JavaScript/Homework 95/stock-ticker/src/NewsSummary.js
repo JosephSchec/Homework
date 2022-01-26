@@ -9,7 +9,7 @@ export default function NewsSummary() {
     useEffect(() => {
         (async () => {
             try {
-                const newsResponse = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${ticker.toUpperCase()}&from=2022-01-25&to=2022-01-26&token=c7onieaad3i94t1inp70`)
+                const newsResponse = await fetch(`https://finnhub.io/api/v1/company-news?symbol=${ticker.toUpperCase()}&from=2022-01-25&to=2022-01-26&token=<API_KEY>`)
                 if (!newsResponse.ok) {
                     throw new Error(`News: ${newsResponse.status} ${newsResponse.statusText} `)
                 }
