@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
-
+import { AddressComponent } from '../address/address.component';
 export interface Person {
   name: string;
   age: number;
-  address: string;
+  address: AddressComponent;
 }
 @Component({
   selector: 'app-person',
@@ -11,5 +11,5 @@ export interface Person {
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent {
-  @Input() person: Person = { name: '', age: 0, address: '' }
+  @Input() person: Person = { name: '', age: 0, address: { address: '' } }
 }

@@ -1,2 +1,4 @@
-<div >{{person.name}} is {{person.age}} and lives at {{person.address}}</div>
-
+<div>{{person.name}} is {{person.age}} and lives at
+    <!--{{person.address}}-->
+ <app-address [address]='person.address.address'></app-address>
+</div>
