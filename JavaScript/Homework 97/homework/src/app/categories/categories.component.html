@@ -1,0 +1,8 @@
+<form #categoriesForm="ngForm">
+  <select [(ngModel)]="this.categoryChose" (ngModelChange)="changeSelect()" name="category.category">
+    <option *ngFor="let category of categories;let i = index" [value]="category.category">{{category.category}}</option>
+  </select>
+</form>
+<hr>
+
+<app-items [items]="items"></app-items>
