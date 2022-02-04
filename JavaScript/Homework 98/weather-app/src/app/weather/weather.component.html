@@ -1,0 +1,15 @@
+<div class="inputDiv">
+<input maxlength="5" [(ngModel)]="zipCode" placeholder="Enter a zipcode" name:zipcode #zipInput="ngModel"
+  (ngModelChange)="gotSelectedZip()">
+</div>
+<div *ngIf="weather.name ">
+  <div>
+    {{weather.name}} is {{weather.main}} -{{weather.description}}
+  </div>
+  <div>The temp is {{weather.temp}} feels like {{weather.feels_like}}</div>
+</div>
+<div *ngIf="zipInput.value?.toString()?.length===5
+  && zipInput.value?.toString()!=='08701'
+  && zipInput.value?.toString()!=='33142'">
+  Zipode Not Found : Try 08701 or 33142
+</div>

@@ -1,0 +1,11 @@
+div{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.5em;
+}
+.inputDiv input{
+  height: 25%;
+  font-size: 1em;
+  text-align: center;
+}
