@@ -1,0 +1,7 @@
+.blog {
+  display: inline-block;
+  width: 33.33%;
+  margin-bottom: 2em;
+  text-align: center;
+  cursor: pointer;
+}
