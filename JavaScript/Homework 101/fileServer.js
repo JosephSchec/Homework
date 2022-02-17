@@ -1,26 +1,36 @@
 'use strict';
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 
+const contentTypes = {
+    '.html': 'text/html',
+    '.css': 'text/css',
+    '.js': 'text/javascript'
+}
 
-http.createServer((req, res) => {
-    res.setHeader('Content-Type', 'text/html')
+http.createServer(async (req, res) => {
+    console.log(req.url);
 
     if (req.url === '/') {
-        res.writeHead(301, ['Location', '/index.html'])
+        res.writeHead(301, { Location: '/index.html' });
     } else {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        try {
-            const fileContent = fs.createReadStream(`./public${req.url}`, 'utf-8');
-            let i = 0;
-            //fileContent.on("error", e => console.error(e))
-            return fileContent.on('data', chunk => {
-               return res.write(`${chunk}  <h2> CHUNK # ============>  ${++i} </h2>`);
-            });
+        res.setHeader('Content-Type', contentTypes[path.extname(req.url) || '.html']);
 
-        } catch (e) {
-            switch (e.code) {
-                case 'ENOENT':
+        const readStream = fs.createReadStream(`./public${req.url}`);
+        /*readStream.on('data', (chunk) => {
+          res.write(chunk);
+        });
+        readStream.on('end', () => {
+          res.end();
+        });*/
+
+        readStream.pipe(res);
+
+        readStream.on('error', (err) => {
+            console.log(err);
+            switch (err.code) {
+                case ('ENOENT'):
                     res.writeHead(404, { 'Content-Type': 'text/html' });
                     res.write('<h1>404 File Not Found</h1>');
                     break;
@@ -28,8 +38,7 @@ http.createServer((req, res) => {
                     res.statusCode = 500;
                     res.write(`Internal Server Error. Unable to get ${req.url}`);
             }
-        }
+            res.end();
+        });
     }
-
-    res.end();
-}).listen(80)
+}).listen(80);
