@@ -1,0 +1,20 @@
+ <form method="POST">
+        <div class="formGroup">
+            <input type="hidden" name="id" required value="{{#contact}}{{id}}{{/contact}}">
+            <label for="name">Name:</label>
+            <input id="name" name="name" required value="{{#contact}}{{name}}{{/contact}}">
+        </div>
+        
+        <div class="formGroup">
+            <label for="address">address:</label>
+            <input  id="address" name="address" value="{{#contact}}{{address}}{{/contact}}">
+        </div>
+        <div class="formGroup">
+            <label for="phone">phone</label>
+            <input id="phone" name="phone" value="{{#contact}}{{phone}}{{/contact}}">
+        </div>
+        <div class="buttons">
+            <button class="btn">save</button>
+            <a class="btn" href="/contacts">cancel</a>
+        </div>
+    </form>

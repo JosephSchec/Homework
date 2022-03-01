@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Joe",
+        "address": "1 Main street   ",
+        "phone": 128634546
+    },
+    {
+        "id": 2,
+        "name": "John",
+        "address": "10 First street ",
+        "phone": 12365456
+    },
+    {
+        "id": 3,
+        "name": "Jeff",
+        "address": "13 Second street",
+        "phone": 12763456
+    }
+]
