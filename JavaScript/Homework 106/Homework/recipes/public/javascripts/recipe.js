@@ -1,6 +1,7 @@
 export default async function (recipe) {
     const recipes = document.getElementById('recipes');
     const thisRecipe = document.createElement('div');
+    
     thisRecipe.id = recipe.id;
     thisRecipe.className = 'recipe';
     recipes.appendChild(thisRecipe);

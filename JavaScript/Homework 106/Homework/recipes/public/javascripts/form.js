@@ -2,13 +2,16 @@ import recipe from "./recipe.js";
 
 export default function () {
 
-    const name = createInput('name');
-    const ingriedients = createInput('ingriedients');
-    const directions = createInput('directions');
+    const form = document.createElement('form');
+    form.id = 'form'
+    const name = createInput('name', form);
+    const ingriedients = createInput('ingriedients', form);
+    const directions = createInput('directions', form);
 
     const addButton = document.createElement('button');
     addButton.textContent = 'add';
     document.body.appendChild(addButton);
+    addButton.style.display='block';
     addButton.addEventListener('click', async () => {
         const newRec = {
             name: name.value,
@@ -16,7 +19,7 @@ export default function () {
             directions: directions.value
         }
         try {
-            const r = await fetch('/recipes', {
+            const r = await fetch(`/recipes`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,24 +29,24 @@ export default function () {
             if (!r.ok) {
                 throw new Error('Cant add right now')
             }
-            recipe(newRec);
-            document.getElementById('form').style.display = 'hidden';
+            const rec=await r.json();
+            recipe(rec);
+            document.getElementById('form').style.display = 'none';
+            addButton.style.display='none';
         } catch (error) {
             console.log(error)
         }
     });
 }
-function createInput(value) {
-    const body = document.body;
-    const form = document.createElement('form');
-    form.id = 'form'
+function createInput(value, form) {
+
     const valueInput = document.createElement('input');
     valueInput.id = value;
     const valueLabel = document.createElement('label');
     valueLabel.textContent = value;
     form.appendChild(valueLabel)
     form.appendChild(valueInput);
-    body.appendChild(form)
+    document.body.appendChild(form)
 
     return valueInput;
 }
