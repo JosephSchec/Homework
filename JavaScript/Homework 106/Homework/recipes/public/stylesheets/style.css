@@ -1,0 +1,48 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 80%;
+  margin: auto;
+  background-color: lightgrey;
+}
+
+a {
+  color: #00B7FF;
+}
+#recipes{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 1.5em;
+  border-radius: 1em;
+}
+
+.recipe{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 7px solid darkviolet;
+  border-radius: 10px;
+  padding: 5px;
+  color: darkturquoise;
+}
+
+
+h1,h2{
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-decoration-color:darkturquoise
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+#form{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
