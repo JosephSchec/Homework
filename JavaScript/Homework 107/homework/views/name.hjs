@@ -1,0 +1,3 @@
+<form  method="post" action="/gotName">
+    name: <input name="name" > <button>submit</button>
+</form>
