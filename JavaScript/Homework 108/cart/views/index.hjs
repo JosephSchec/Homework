@@ -1,0 +1,36 @@
+<div class="container ">
+  <div class="row align-items-start justify-content-end">
+    <a href="/checkout" class="text-end text-decoration-none fs-3 w-auto">Cart</a>
+  </div>
+</div>
+<div class="row row-cols-1 row-cols-md-2 mb-3 text-center">
+  {{#items}}
+  <div class="col">
+    <div class="card mb-4 rounded-3 shadow-sm">
+      <div class="card-header py-3">
+        <h4 class="my-0 fw-normal">{{name}}</h4>
+      </div>
+
+      <div class="card-body">
+        <img class="product-img " src="{{img}}" alt="{{name}}">
+        <h1 class="card-title pricing-card-title">{{price}}</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>{{description}}</li>
+        </ul>
+
+        <form class="row row-cols-lg-auto g-3 align-items-center justify-content-center" method="POST">
+          <div class="col-12">
+            <input type="number" name="quantity" value="1" min="1" max="10" class="form-control">
+          </div>
+          <input type="hidden" name="id" value="{{id}}">
+          <div class="col-12">
+            <button class="w-100 btn btn-outline-primary">add to cart</button>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+  {{/items}}
+</div>

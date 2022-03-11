@@ -1,0 +1,70 @@
+<div class="container ">
+    <div class="row align-items-start justify-content-end">
+        <a href="/" class="text-end text-decoration-none fs-3 w-auto">Home</a>
+    </div>
+</div>
+
+
+{{#items}}
+<div class="col">
+    <div class="card mb-4 rounded-3 ">
+        <div class="card-header py-3">
+            Checkout
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            {{#items.1}}
+                            <h4 class="card-subtitle mb-2 text-muted">Hot Dogs</h4>
+                            <p class="card-text">Quantity: {{items.1}}</p>
+                            <p class="card-text">Total: {{hotDogTotal}}</p>
+                            <form method="POST">
+                                <div class="row ">
+                                    <input type="number" class="w-auto" name="update" value="{{items.1}}">
+                                    <input type="hidden" name="id" value="1">
+                                    <button class=" btn btn-outline-primary w-auto">Update</button>
+                                </div>
+                            </form>
+                            <br />
+                            {{/items.1}}
+
+                            {{#items.2}}
+                            <h4 class="card-subtitle mb-2 text-muted">Fries</h4>
+                            <p class="card-text">Quantity: {{items.2}}</p>
+                            <p class="card-text">Total: {{friesTotal}}</p>
+
+
+                            <form method="POST">
+                                <div class="row ">
+                                    <input type="number" class="w-auto" name="update" id="2" value="{{items.2}}">
+                                    <input type="hidden" name="id" value="2">
+                                    <button class=" btn btn-outline-primary w-auto">Update</button>
+                                </div>
+                            </form>
+                            {{/items.2}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Total</h5>
+                            <p class="card-text">{{total}}
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+
+
+{{/items}}
