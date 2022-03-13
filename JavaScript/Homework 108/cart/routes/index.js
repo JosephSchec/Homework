@@ -24,7 +24,7 @@ router.route('/')
 
 router.route('/checkout')
   .get((req, res, next) => {
-    const total = (Number(cart?.getItems()['1']) * 2.99) + (Number(cart?.getItems()['2']) * 1.99)
+    const total = (Number(cart?.getItems()['1']||0) * 2.99) + (Number(cart?.getItems()['2']||0) * 1.99)
     res.render('layout', {
       title: 'Checkout',
       items: cart?.getItems(),
