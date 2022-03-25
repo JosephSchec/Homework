@@ -1,0 +1,12 @@
+#addPost{
+  width: 80%;
+  margin: auto;
+}
+#addPost input, #addPost textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  #addPost textarea {
+    height: 20em;
+  }
