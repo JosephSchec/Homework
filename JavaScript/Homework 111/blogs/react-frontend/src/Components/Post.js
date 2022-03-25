@@ -11,7 +11,7 @@ export default function Post({ post: { _id, title, body, author, date, comments 
     return (
         <div className='post'>
             <h2>{title}</h2>
-            <h3>by {author} on {new Date(date).toLocaleString()}</h3>
+            <h3>By: {author} on {new Date(date).toLocaleString()}</h3>
             <div>{body}</div>
             <div className="comments">
                 {content}

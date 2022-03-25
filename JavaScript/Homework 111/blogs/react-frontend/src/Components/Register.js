@@ -8,7 +8,7 @@ export default function Login() {
     const onSubmit = async e => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:8080/login', {
+            const response = await fetch('http://localhost:8080/register', {
                 method: 'POST',
                 credentials:'include',
                 headers: {
@@ -16,7 +16,6 @@ export default function Login() {
                 },
                 body: JSON.stringify(formData)
               });
-        
               if (!response.ok) {
                 throw new Error(`${response.status} ${response.statusText}`);
               }
@@ -35,7 +34,7 @@ export default function Login() {
             <label>password:
                 <input name="password" value={formData.password} onChange={setFormData}/>
             </label>
-            <button>Login</button>
+            <button>Register</button>
         </form>
   )
 }
