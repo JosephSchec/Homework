@@ -7,15 +7,21 @@ import NotFound from './Components/NotFound'
 import Header from './Components/Header'
 import Login from './Components/Login';
 import Register from './Components/Register';
+import Logout from './Components/Logout';
+
 function App() {
   return (<>
     <Header />
     <Routes>
-      <Route path='/' element={<Posts/>}/>
+      <Route path='/' element={<Posts />} />
       <Route path="/posts" element={<Posts />} />
       <Route path="/addPost" element={<AddPost />} />
-      <Route path="/login" element={<Login />}/>
-      <Route path='/register' element={<Register/>}/>
+      <Route path="/login" element={<Login />} />
+      <Route path="/logout" element={<Logout />} />
+
+      <Route path='/register' element={<Register />} />
+     
+
       <Route path='*' element={<NotFound />} />
     </Routes>
     <Outlet />

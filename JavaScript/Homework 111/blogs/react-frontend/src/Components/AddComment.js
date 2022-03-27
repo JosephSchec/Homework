@@ -22,6 +22,7 @@ export default function AddComment({ id, endCommenting }) {
           console.error(error);
         }
       };
+
     return (
         <div>
             <input name="body" value={commentBody} onChange={e => setCommentBody(e.target.value)} />

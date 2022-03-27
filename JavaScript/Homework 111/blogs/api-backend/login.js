@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const mongo = require('./mongo')();
 
 module.exports = async (req, res, next) => {
+    const io = req.app.get('socketio');
     const posts = await mongo;
     const query = { username: req.body.username }
     const results = await posts.findOne(query);
@@ -20,6 +21,7 @@ module.exports = async (req, res, next) => {
         }
     
             req.session.user = req.body.username;
+            io.emit('user',req.session.user)
             res.redirect('/posts')
         
     });

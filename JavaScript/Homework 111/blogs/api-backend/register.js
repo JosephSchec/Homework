@@ -8,7 +8,7 @@ module.exports = async (req, res, next) => {
     if (!req.body.username || !req.body.password) {
         return next(new Error('Username and password are required'));
     }
-    if ( nameExist) {
+    if (nameExist) {
         return next(new Error('Username already exists'))
     }
 

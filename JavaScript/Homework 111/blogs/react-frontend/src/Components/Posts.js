@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Post from './Post';
+import { io } from "socket.io-client";
+const socket = io(`http://${window.location.hostname}:8080`);
 export default function Posts() {
     const [posts, setPost] = useState([]);
     useEffect(() => {
@@ -16,6 +18,7 @@ export default function Posts() {
             }
         })();
     }, []);
+    socket.on('newPost',newP=>setPost(newP=>[...posts,newP]));
     return (
         <div>{posts.map(post => <Post key={post._id} post={post}/>)}</div>
     )
